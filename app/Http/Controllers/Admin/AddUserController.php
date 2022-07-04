@@ -35,8 +35,7 @@ class AddUserController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
-        $email_data = array(
-            
+        $email_data = array(        
             'name' => $data['name'],
             'email' => $data['email'],
         );

@@ -16,10 +16,11 @@ class CommentController extends Controller
         return view('admin.comment.index',compact('complains'));
     }
 
-    public function edit()
+    public function edit($id)
     {
-        $user_complains = UserComplain::all();
+        $user_complains = UserComplain::with('category')->find($id);
         $category = Category::all();
+        // dd($user_complains->description);
         return view('admin.comment.edit',compact('user_complains','category'));
     }
 

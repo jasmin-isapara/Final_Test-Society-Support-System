@@ -27,11 +27,12 @@
             <div class="row">
                 <div class="mb-3 col-md-6">
                     <label for="">Category Name</label>
-                    <input type="text" name="name" value="" class="form-control" disabled>
+                    <input type="text" name="name" value="{{ $user_complains->category->name }}" class="form-control" disabled>
                 </div>
                 <div class="mb-3 col-md-6">
                     <label for="">Description</label>
-                    <textarea  name="description" value="" rows="2" class="form-control" disabled></textarea>
+                    <textarea  name="description" value="{{ $user_complains->description }}" rows="2" class="form-control" disabled></textarea>
+                    
                 </div>
                 <div class="mb-3 col-md-6">
                     <label for="">Reply Comment</label>
