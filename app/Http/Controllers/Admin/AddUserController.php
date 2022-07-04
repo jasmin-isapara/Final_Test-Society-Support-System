@@ -36,6 +36,7 @@ class AddUserController extends Controller
         ]);
 
         $email_data = array(
+            
             'name' => $data['name'],
             'email' => $data['email'],
         );
