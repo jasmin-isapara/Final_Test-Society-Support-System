@@ -21,9 +21,9 @@
             </div>
             @endif
 
-            <form action="{{ url('admin/view-comment') }}" method="POST">
+            <form action="{{ url('admin/add-comment') }}" method="POST">
                 @csrf
-                @method('PUT')  
+                {{-- @method('PUT')   --}}
             <div class="row">
                 <div class="mb-3 col-md-6">
                     <label for="">Category Name</label>
@@ -31,8 +31,7 @@
                 </div>
                 <div class="mb-3 col-md-6">
                     <label for="">Description</label>
-                    <textarea  name="description" value="{{ $user_complains->description }}" rows="2" class="form-control" disabled></textarea>
-                    
+                    <input type="text" name="name" value="{{ $user_complains->description }}" class="form-control" disabled>                    
                 </div>
                 <div class="mb-3 col-md-6">
                     <label for="">Reply Comment</label>

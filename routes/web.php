@@ -68,7 +68,7 @@ Route::prefix('admin')->middleware(['auth','is_admin'])->group(function ()
 
     Route::get('comments',[App\Http\Controllers\CommentController::class,'index']);
     Route::get('view-comment/{id}',[App\Http\Controllers\CommentController::class,'edit']);
-    Route::put('add-comment/{id}',[App\Http\Controllers\CommentController::class,'update']);
+    Route::post('add-comment/{id}',[App\Http\Controllers\CommentController::class,'store']);
     Route::get('delete-comment/{id}',[App\Http\Controllers\CommentController::class,'destroy']);
 
     // Route::post('addUser',[App\Http\Controllers\Admin\UserRegisterController::class,'create']);
