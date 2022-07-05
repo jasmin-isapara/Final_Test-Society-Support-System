@@ -1,3 +1,4 @@
+<link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
 
 <div>
     @if($errors->any())
@@ -7,7 +8,7 @@
                 @endforeach
             </div>
         @endif
-
+<div class="container-fluid px-4">
 <div class="form-group">
     <form action="{{ url('add-complain') }}" method="POST" enctype="multipart/form-data">
         @csrf
@@ -31,7 +32,7 @@
         <div>
             <label for="">Image</label>
             <input type="file" name="image" required class="form-control">
-        </div><br>
+        </div>
         {{-- <div class="mb-3 col-md-6">
             <label for="">Complain_Date</label>
             <input type="date" name="date" class="form-control">
@@ -43,4 +44,5 @@
     </form>
 </div>
 </div>
+</div>  
 

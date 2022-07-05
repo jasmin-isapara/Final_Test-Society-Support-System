@@ -1,6 +1,8 @@
+<link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
+
 <div class="container ">
     <div class="header">
-      <h1>User Registration</h1>
+      <h1 align="center" >User Registration</h1>
     </div>
     <form method="POST" action="{{ url('admin/add-user') }}">
         @csrf
